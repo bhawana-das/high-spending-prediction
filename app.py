@@ -75,7 +75,7 @@ try:
     with col1:
         input_monthly = st.number_input("balance_after_transaction", 1000, 20000, 3000)
         
-    if st.button("Predict Fee"):
+    if st.button("Predict Amount"):
         prediction = model.predict([[input_monthly]])
         st.success(f"Predicted transaction_amount: NPR {prediction[0]:,.2f}")
 
